@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pengepul</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #457b9d);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .profiles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .profile {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .profile:hover {
+            transform: scale(1.05);
+        }
+        .profile img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .profile .info {
+            padding: 15px;
+        }
+        .profile .info h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #457b9d;
+        }
+        .profile .info p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .contact {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #1d3557;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #1d3557;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Profil Pengepul Bank Sampah</h1>
+            <p>Mengenal para pengepul terbaik kami</p>
+        </div>
+
+        <div class="profiles">
+            <!-- Profil Pengepul 1 -->
+            <div class="profile">
+                <img src="https://via.placeholder.com/300x200" alt="Profil Pengepul 1">
+                <div class="info">
+                    <h2>Ahmad Syahputra</h2>
+                    <p>Ahmad adalah pengepul berpengalaman yang telah bekerja selama 5 tahun dalam pengelolaan sampah daur ulang. Ahmad sangat berdedikasi dalam membantu komunitas menjaga lingkungan.</p>
+                    <div class="contact">
+                        <strong>Kontak:</strong> 0812-3456-7890<br>
+                        <strong>Alamat:</strong> Jl. Melati No. 10, Pondok Melati
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil Pengepul 2 -->
+            <div class="profile">
+                <img src="https://via.placeholder.com/300x200" alt="Profil Pengepul 2">
+                <div class="info">
+                    <h2>Siti Nurhaliza</h2>
+                    <p>Siti adalah pengepul muda yang bersemangat. Dengan inovasi dan kerja keras, ia telah membantu meningkatkan kesadaran masyarakat akan pentingnya daur ulang sampah.</p>
+                    <div class="contact">
+                        <strong>Kontak:</strong> 0821-9876-5432<br>
+                        <strong>Alamat:</strong> Jl. Mawar No. 5, Pondok Melati
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Bank Sampah - Semua Hak Dilindungi</p>
+    </div>
+</body>
+</html>
