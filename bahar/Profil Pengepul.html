@@ -1,130 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Pengepul</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #000000, #457b9d);
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .header {
-            text-align: center;
-            padding: 20px;
-            color: white;
-        }
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        .profiles {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .profile {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            width: 300px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .profile:hover {
-            transform: scale(1.05);
-        }
-        .profile img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .profile .info {
-            padding: 15px;
-        }
-        .profile .info h2 {
-            font-size: 1.5rem;
-            margin: 10px 0;
-            color: #457b9d;
-        }
-        .profile .info p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .contact {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #1d3557;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #1d3557;
-            color: white;
-            margin-top: 40px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Sampah</title>
+  <link rel="stylesheet" href="BankSampah.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Profile Pembuat Web Bank Sampah</h1>
-            <p>Mengenal kami</p>
-        </div>
-
-        <div class="profiles">
-            <!-- Profil  1 -->
-            <div class="profile">
-                <img src="Bank Sampah/Aset/zid.jpg" alt="Profil  1">
-                <div class="info">
-                    <h2>Muhammad Zidan Fikri</h2>
-                    
-                    <div class="contact">
-                        <strong>Kontak:</strong> 0813-9863-5401<br>
-                        <strong>Alamat:</strong> Jl. Meranti Raya blok g 297
-                    </div>
-                </div>
-            </div>
-
-            <!-- Profil  2 -->
-            <div class="profile">
-                <img src="https://via.placeholder.com/300x200" alt="Profil  2">
-                <div class="info">
-                    <h2>Baharuddin Yusuf Mulyono</h2>
-                    
-                    <div class="contact">
-                        <strong>Kontak:</strong> 0878-7666-8945<br>
-                        <strong>Alamat:</strong> Jl. Mawar No. 5, Pondok Melati
-                    </div>
-                </div>
-            </div>
-
-            <!-- Profil  3 -->
-            <div class="profile">
-                <img src="Bank Sampah/Aset/WhatsApp Image 2024-12-17 at 12.58.08_f1f3641c.jpg" alt="Profil  3">
-                <div class="info">
-                    <h2>Indra Kusuma</h2>
-                    
-                    <div class="contact">
-                        <strong>Kontak:</strong> 0857-7377-0689<br>
-                        <strong>Alamat:</strong> Jl. gatotkaca 1 blok f3 No. 4, bekasi timur permai
-                    </div>
-                </div>
-            </div>
-        </div>
+  <header>
+    <div class="logo">
+      <img src="Bank Sampah/Aset/images.jpeg" alt="Logo Bank Sampah">
+      <h1>Bank Sampah</h1>
     </div>
+    <nav>
+      <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="menu">
+          <a href="Login.html">Login</a>
+          <a href="SignUp.html">Sign Up</a>
+          <a href="Profil Pengepul.html">Profil</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="carousel">
+      <div class="carousel-container" id="carouselContainer">
+        <div class="carousel-item">
+          <img src="Bank Sampah/Aset/1.jpeg" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="Bank Sampah/Aset/2.jpeg" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="Bank Sampah/Aset/3.jpeg" alt="Image 3">
+        </div>
+        <div class="carousel-item">
+          <img src="Bank Sampah/Aset/4.jpeg" alt="Image 4">
+        </div>
+      </div>
+      <button class="carousel-control prev" id="prevBtn" aria-label="Previous Slide">&#10094;</button>
+      <button class="carousel-control next" id="nextBtn" aria-label="Next Slide">&#10095;</button>
+    </section>
 
-    <div class="footer">
-        <p>&copy; 2024 Bank Sampah - Semua Hak Dilindungi</p>
+    <section class="description">
+      <article class="isi">
+        <p>Bank sampah adalah sebuah sistem pengelolaan sampah berbasis komunitas yang berfungsi sebagai tempat pengumpulan dan pengelolaan sampah yang memiliki nilai ekonomi. Konsep ini bekerja mirip seperti bank pada umumnya, namun yang ditabung bukan uang, melainkan sampah yang dapat didaur ulang atau memiliki nilai jual.</p>
+      </article>
+      <a class="profile-button" href="Profil Pengepul.html">Profile</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="about-us">Ayo bergabung bersama kami</div>
+      <p class="about">Jadilah yang pertama mengetahui update komunitas kami termasuk penawaran khusus dari shop kami!</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Bank%20Sampah%20Kemuning%20Jl.%20Alam%20Raya%201%2C%20RT.001%2FRW.012%2C%20Jatimelati%2C%20Kec.%20Pd.%20Melati%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017431&zoom=10&maptype=roadmap"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          aria-label="Google Maps Location">
+        </iframe>
+      </div>
     </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+
+    // Carousel auto-slide functionality
+    let currentIndex = 0;
+    const carouselContainer = document.getElementById('carouselContainer');
+    const items = carouselContainer.children;
+    const totalItems = items.length;
+
+    function showSlide(index) {
+      const offset = -index * 100;
+      carouselContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalItems;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      showSlide(currentIndex);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      nextSlide();
+    });
+  </script>
 </body>
 </html>
