@@ -2,26 +2,22 @@ const carouselContainer = document.querySelector('.carousel-container');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-let currentIndex = 0;
+let currentIndex = 0; // Indeks slide saat ini
+const totalSlides = document.querySelectorAll('.carousel-item').length; // Total jumlah foto
 
+// Fungsi untuk memperbarui posisi carousel
 function updateCarousel() {
-  const slideWidth = document.querySelector('.carousel-item').clientWidth;
-  carouselContainer.style.transform = `translateX(${-currentIndex * slideWidth}px`;
+  carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-nextBtn.addEventListener('click', () => {
-  const totalSlides = document.querySelectorAll('.carousel-item').length;
-  if (currentIndex < totalSlides - 1) {
-    currentIndex++;
-    updateCarousel();
-  }
-});
-
+// Geser ke kiri (slide sebelumnya)
 prevBtn.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateCarousel();
-  }
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Looping ke slide terakhir jika di awal
+  updateCarousel();
 });
 
-window.addEventListener('resize', updateCarousel);
+// Geser ke kanan (slide selanjutnya)
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalSlides; // Looping ke slide pertama jika di akhir
+  updateCarousel();
+});

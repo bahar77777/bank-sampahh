@@ -59,9 +59,14 @@
 <body>
     <div class="container">
         <h1>Bank Sampah</h1>
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button onclick="window.location.href='Login.html'">Kirim</button>
+        <form action="signup.php" method="POST">
+            <label>Username:</label>
+            <input type="text" name="username" required>
+            <label>Password:</label>
+            <input type="password" name="password" required>
+            <button type="submit">Signup</button>
+        </form>
+        
     </div>
 </body>
 </html>
